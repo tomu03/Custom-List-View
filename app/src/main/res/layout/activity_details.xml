@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    tools:context=".detailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tamim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Tamin Iqbal"
+            android:textSize="24sp"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/profileImg"
+            app:layout_constraintStart_toStartOf="@+id/profileImg"
+            app:layout_constraintTop_toBottomOf="@+id/profileImg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileName"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/profileName"
+            app:layout_constraintTop_toBottomOf="@+id/profileName"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/profileDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:justificationMode="inter_word"
+                android:text="@string/Tamim"
+                android:textSize="14sp" />
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
