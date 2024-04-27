@@ -2,6 +2,7 @@ package com.webcode.customlistview
 
 import android.os.Bundle
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -41,12 +42,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         listView = findViewById(R.id.listView)
+
+        val myListAdapter = MyListAdapter(this, profileName, profileDec, images)
+
+        listView.adapter = myListAdapter
+
+        listView.setOnItemClickListener { parent, view, position, id ->
+            Toast.makeText(
+                this,
+                "Item Clicked${parent.getItemAtPosition(position)}",
+                android.widget.Toast.LENGTH_SHORT
+            ).show()
+        }
     }
-
-    val myListAdapter = MyListAdapter(this,profileName,profileDec,images)
-
-
-
-
-
 }
